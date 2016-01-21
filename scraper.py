@@ -11,6 +11,10 @@ html = scraperwiki.scrape("http://uk.soccerway.com/teams/netherlands/fortuna-sit
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
 tds = root.cssselect('td')
+for td in tds:
+  record = {'cell' : td.text}
+  print record
+  scrperwiki.sqlite.save(['cell'], record)
 indexno = 0
 Indexno = indexno +1
 record = {"td" : td.text, "index" : indexno}
