@@ -14,8 +14,8 @@ root = lxml.html.fromstring(html)
 #tds = root.cssselect('td')
 kik = root.cssselect('div')
 #change 'td' to a different selector to scrape something else on the page
-#lxml.html  - Parsing HTML (breaking it up and getting to a bit of it. lxml.html.fromstring – turns something from a string into something else.
-#tds = root.cssselect (‘td’) – cssselect is attached to an lxml object
+#lxml.html  - Parsing HTML (breaking it up and getting to a bit of it. lxml.html.fromstring 
+# – turns something from a string into something else.#tds = root.cssselect td – cssselect is attached to an lxml object
 #cssselect is attached to an lxml object, so look in lxml documentation
 #use .cssselect method on root to grab 'td' tags and put in tds
 #tds = root.cssselect('td')
