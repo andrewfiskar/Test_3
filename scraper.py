@@ -3,7 +3,8 @@
 
 import scraperwiki
 import lxml.html
-#
+#next line imports the lxml.html library import lxml,html
+#use the.fromstring function to turn html into a lxml 'object', a variable called 'root'
 # # Read in a page
 html = scraperwiki.scrape("http://uk.soccerway.com/teams/netherlands/fortuna-sittard/")
 print html
@@ -11,6 +12,7 @@ print html
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
 tds = root.cssselect('td')
+#change 'td' to a different selector to scrape something else on the page
 #lxml.html  - Parsing HTML (breaking it up and getting to a bit of it. lxml.html.fromstring – turns something from a string into something else.
 #tds = root.cssselect (‘td’) – cssselect is attached to an lxml object
 #cssselect is attached to an lxml object, so look in lxml documentation
